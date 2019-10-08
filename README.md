@@ -1,2 +1,2 @@
 # WebAutomation
-Automate https://www.londontheatredirect.com using selenium
+Automate using selenium
