@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseClass {
     public WebDriver driver;
     //Need to take this from properties file
-    private String baseURL = "";
+    private String baseURL = "https://www.londontheatredirect.com";
 
     @BeforeClass
     public void setUp() {

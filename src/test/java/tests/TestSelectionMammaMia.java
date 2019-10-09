@@ -18,15 +18,15 @@ public class TestSelectionMammaMia extends BaseClass {
     }
 
     @Test
-    public void selectMammaMiaShowAndBookTicketsTest(){
+    public void selectMammaMiaShowAndBookTicketsTest() {
         HomePage homePage = new HomePage(driver);
         String statusMessage = homePage.
                 searchForAShow("Mamma Mia!").bookTickets()
                 .selectTodaysShow().selectAvailableTicket().
-                selectCreditOrDebitCard()
+                        selectCreditOrDebitCard()
                 .enterPaxDetailsAndSubmit()
                 .validatePaymentSuccessful();
-        Assert.assertEquals(statusMessage,"Booking Confirmed", "Not able to confirm booking");
+        Assert.assertEquals(statusMessage, "Booking Confirmed", "Not able to confirm booking");
 
     }
 

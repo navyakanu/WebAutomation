@@ -42,7 +42,7 @@ public class TicketAvailabilityPage extends Helpers {
          */
 
 
-        waitForElement(ticketAvailabilityPagePageObjects.addToBasket);
+        waitForElement(ticketAvailabilityPagePageObjects.addToBasket).click();
         return new CheckOutPage(driver);
     }
 

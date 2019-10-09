@@ -1,13 +1,9 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.CalendarPageObjects;
-
 import utils.Helpers;
-
-import javax.swing.*;
 
 public class CalendarPage extends Helpers {
 
@@ -24,12 +20,10 @@ public class CalendarPage extends Helpers {
 //        return calendarPageObjects.calendarHeading.getText();
 //    }
 
-    public TicketAvailabilityPage selectTodaysShow(){
-         calendarPageObjects.bookingDay.click();
+    public TicketAvailabilityPage selectTodaysShow() {
+        calendarPageObjects.bookingDay.click();
         return new TicketAvailabilityPage(driver);
     }
-
-
 
 
 }
