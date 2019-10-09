@@ -21,9 +21,23 @@ public class CheckOutPage extends Helpers {
 //        return this;
 //    }
 
-    public void selectCreditOrDebitCard(){
+    public CheckOutPage selectCreditOrDebitCard(){
         checkOutPageObjects.selectCreditCardOption.click();
+        return this;
         //Enter credit card details
+    }
+
+
+    public CheckOutPage enterPaxDetailsAndSubmit(){
+        checkOutPageObjects.name.sendKeys("");
+        checkOutPageObjects.phoneNumber.sendKeys("");
+        checkOutPageObjects.address.sendKeys("");
+        checkOutPageObjects.makePayment.click();
+        return this;
+    }
+
+    public String validatePaymentSuccessful(){
+        return checkOutPageObjects.successMessage.getText();
     }
 
 
