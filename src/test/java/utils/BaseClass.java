@@ -10,12 +10,13 @@ import java.util.concurrent.TimeUnit;
 public class BaseClass {
     public WebDriver driver;
     //Need to take this from properties file
-    private String baseURL = "https://www.londontheatredirect.com";
+    private String baseURL = "";
 
     @BeforeClass
     public void setUp() {
         driver = BrowserFactory.getBrowser("chrome");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         try{
             driver.get(baseURL);
         }

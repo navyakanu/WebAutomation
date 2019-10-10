@@ -14,7 +14,7 @@ public class TicketAvailabilityPageObjects {
     @FindBy(css="ltd-cta__row:nth-child(2)")
     public WebElement seat;
 
-    @FindBy(className = "seat-plan__submit")
+    @FindBy(css = "modal__close > .ltd-icon")
     public WebElement addToBasket;
 
     @FindBy(className = "ltd-cta__icon")

@@ -10,11 +10,17 @@ public class ShowDetailsPage extends Helpers {
 
     private ShowDetailsPageObjects showDetailsPageObjects;
 
-    public ShowDetailsPage(WebDriver driver) {
+    public ShowDetailsPage(WebDriver driver) throws Exception {
         super(driver);
         showDetailsPageObjects = new ShowDetailsPageObjects();
         PageFactory.initElements(driver, showDetailsPageObjects);
-        waitForElement(showDetailsPageObjects.showName);
+        try{
+            waitForElement(showDetailsPageObjects.showName);
+        }
+        catch (Exception e ){
+            System.out.print("Tour not found ! ");
+        }
+
     }
 
     public String getShowName(){

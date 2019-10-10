@@ -8,7 +8,7 @@ import utils.BaseClass;
 public class TestSelectionMammaMia extends BaseClass {
 
     @Test
-    public void selectMammaMiaShowTest() {
+    public void selectMammaMiaShowTest() throws Exception {
         HomePage homePage = new HomePage(driver);
         String showNameInShowDetailsPage = homePage.
                 searchForAShow("Mamma Mia!").
@@ -18,7 +18,7 @@ public class TestSelectionMammaMia extends BaseClass {
     }
 
     @Test
-    public void selectMammaMiaShowAndBookTicketsTest() {
+    public void selectMammaMiaShowAndBookTicketsTest() throws Exception {
         HomePage homePage = new HomePage(driver);
         String statusMessage = homePage.
                 searchForAShow("Mamma Mia!").bookTickets()

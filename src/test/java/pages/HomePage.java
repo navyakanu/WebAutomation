@@ -16,7 +16,7 @@ public class HomePage extends Helpers {
         waitForElement(homePageObjects.searchBar);
     }
 
-    public ShowDetailsPage searchForAShow(String showName){
+    public ShowDetailsPage searchForAShow(String showName) throws Exception {
         homePageObjects.searchBar.sendKeys(showName);
         homePageObjects.searchButton.click();
         homePageObjects.searchButton.click();
